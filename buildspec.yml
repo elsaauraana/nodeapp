@@ -13,7 +13,7 @@ phases:
       - docker build -t custom-nodejs/mysql .
       - docker images
       - docker --version
-      - docker run -d -p 3001:3000 --name myapp custom-nodejs/mysql
+      - docker run -d -p 3000:3000 --name myapp custom-nodejs/mysql
      
 #   post_build:
      
