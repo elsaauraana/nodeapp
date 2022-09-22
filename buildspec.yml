@@ -13,9 +13,10 @@ phases:
       - docker build -t custom-nodejs/mysql .
       - docker images
       - docker --version
-     
-  post_build:
       - docker run -d -p 3000:3000 --name myapp custom-nodejs/mysql
+     
+#   post_build:
+     
 # artifacts:
 #   files:
 #     - target/messageUtil-1.0.jar
