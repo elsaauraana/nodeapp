@@ -10,8 +10,11 @@ phases:
 #       - echo Nothing to do in the pre_build phase...
   build:
     commands:
-      - docker build -t custom-node/mysql .
-      - echo "running docker "
+      - docker build -t custom-nodejs/mysql .
+      - docker images
+      - docker --version
+     
+  post_build:
       - docker run -d -p 3000:3000 --name myapp custom-nodejs/mysql
 # artifacts:
 #   files:
