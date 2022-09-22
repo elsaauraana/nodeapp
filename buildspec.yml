@@ -11,6 +11,7 @@ phases:
   build:
     commands:
       - docker build -t custom-node/mysql .
+      - echo "running docker "
       - docker run -d -p 3000:3000 --name myapp custom-nodejs/mysql
 # artifacts:
 #   files:
